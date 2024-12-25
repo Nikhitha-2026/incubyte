@@ -88,3 +88,11 @@ Install dependencies:
 
 npm install
 
+### Extra Questions
+
+* If the endpoint required authentication, how would you consider implementing this?
+To manage authentication, we can store the token securely after the user logs in and include it in API requests by passing it in the HTTP headers (e.g., Authorization: Bearer <token>). we should also handle token expiration and implement automatic re-authentication when necessary.
+* What if we wanted the UI to update based on changes from the server?
+For real-time updates, consider using WebSockets, which allow the server to push changes directly to the client. Alternatively, we can use polling or Server-Sent Events (SSE) for periodic updates. Ensure the UI automatically reflects these changes by using state management techniques, such as Redux or the Context API, to trigger re-renders when data is updated.
+
+
